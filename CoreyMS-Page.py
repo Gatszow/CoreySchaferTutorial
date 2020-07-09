@@ -19,7 +19,7 @@ for article in soup.find_all('article'):
         video_id = video_src.split('/')[4]
         video_id = video_id.split('?')[0]
         youtube_link = f'https://youtube.com/watch?v={video_id}'
-    except Exception:
+    except TypeError:
         youtube_link = None
     print(headline)
     print(summary)
