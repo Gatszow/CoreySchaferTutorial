@@ -1,13 +1,11 @@
 from bs4 import BeautifulSoup
 import requests
 import csv
-from os import chdir
 
 source = requests.get('https://coreyms.com/').text
 
 soup = BeautifulSoup(source, 'lxml')
 
-chdir('Basic (Podstawowy)')
 csv_file = open('cms_scrape.csv', 'w')
 
 csv_writer = csv.writer(csv_file)
